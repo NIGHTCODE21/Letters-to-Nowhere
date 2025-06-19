@@ -76,7 +76,10 @@ button:hover {
   max-width: 100%;
   line-height: 1.6;
   text-align: left;
+  text-align: center;        /* ✅ center the text */
+  justify-content: center;   /* optional for flexbox containers */
 }
+
 
 
 
@@ -192,19 +195,6 @@ textarea {
   object-fit: cover;
 }
 
-#burnMessage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  font-size: 1.3rem;
-  color: #ff8787;
-  font-weight: 500;
-  text-align: center;
-  z-index: 99999;
-  text-shadow: 0 0 6px rgba(255, 100, 100, 0.5);
-}
 
 
 

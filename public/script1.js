@@ -149,6 +149,8 @@ document.getElementById("makePosterBtn").addEventListener("click", async () => {
       img.src = imageUrl;
       img.alt = "Generated Poster";
       img.classList.add("generated-poster");
+      img.scrollIntoView({ behavior: "smooth", block: "center" });
+
 
 
       document.querySelector(".container").appendChild(img);

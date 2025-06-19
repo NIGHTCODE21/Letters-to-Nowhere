@@ -70,15 +70,14 @@ button:hover {
   color: #ffbfbf;
   text-shadow: 0 0 3px rgba(255, 100, 100, 0.6);
   transition: all 0.4s ease-in;
-
-  white-space: pre-wrap;        /* ✅ Preserves line breaks */
-  word-break: break-word;       /* ✅ Only break very long words */
-  overflow-wrap: break-word;    /* ✅ Break long words at container edge */
-  
+  white-space: pre-wrap;           /* 🟢 preserves spacing & wraps */
+  overflow-wrap: break-word;       /* 🟢 break long words if needed */
+  padding: 4px 8px;
   max-width: 100%;
   line-height: 1.6;
-  text-align: left;             /* 🔄 ← REMOVE justify — it causes weird breaks */
+  text-align: left;
 }
+
 
 
 
@@ -192,6 +191,21 @@ textarea {
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
   object-fit: cover;
 }
+
+#burnMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 1.3rem;
+  color: #ff8787;
+  font-weight: 500;
+  text-align: center;
+  z-index: 99999;
+  text-shadow: 0 0 6px rgba(255, 100, 100, 0.5);
+}
+
 
 
 

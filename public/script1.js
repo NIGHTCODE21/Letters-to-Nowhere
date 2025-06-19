@@ -1,6 +1,5 @@
 let lastAIReply = "";
 let lastSecret = "";
-lastSecret = secret;
 const reply = await fetchAIResponse(secret);
 
 async function fetchAIResponse(secret) {
@@ -39,6 +38,8 @@ document.getElementById("submitBtn").addEventListener("click", async() => {
 
   const secret = secretInput.value.trim();
   if (!secret) return alert("Type your secret first...");
+
+  lastSecret = secret;
 
   whisperSound.play();
  const reply = await fetchAIResponse(secret);

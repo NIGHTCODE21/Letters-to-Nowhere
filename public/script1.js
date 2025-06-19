@@ -55,8 +55,8 @@ document.getElementById("submitBtn").addEventListener("click", async() => {
       outputDiv.classList.add("fade-out");
 
       setTimeout(() => {
-        outputDiv.classList.add("hidden"); // hide AI reply
-        document.getElementById("burnMessage").classList.remove("hidden"); // show burn msg
+        outputDiv.innerText = "🫢 Your secret has been burned.";
+
 
         outputDiv.classList.remove("fade-out");
         secretInput.value = "";

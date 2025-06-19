@@ -36,7 +36,7 @@ app.post("/reply", async (req, res) => {
         {
           role: "system",
           content:
-            "You are a comforting friend. Reply empathetically, supportively, and kindly when someone shares something painful or emotional.",
+            "Give a kind, short response to the secret (max 2–3 sentences), and end with an uplifting quote.",
         },
         {
           role: "user",

@@ -17,7 +17,7 @@ body {
   box-shadow: 0 0 60px rgba(255, 255, 255, 0.08);
   text-align: center;
   width: 100%;
-  max-width: 520px; /* Clean proportion */
+  max-width: 600px; /* Clean proportion */
   min-height: auto;
   height: auto;
   margin: auto;
@@ -70,13 +70,16 @@ button:hover {
   color: #ffbfbf;
   text-shadow: 0 0 3px rgba(255, 100, 100, 0.6);
   transition: all 0.4s ease-in;
-  white-space: pre-wrap;             /* ✅ Keeps paragraphs + wraps lines */
-  overflow-wrap: break-word;         /* ✅ Breaks if word is too long */
-  word-break: normal;                /* ✅ Never break words mid-letter */
+
+  white-space: pre-wrap;        /* ✅ Preserves line breaks */
+  word-break: break-word;       /* ✅ Only break very long words */
+  overflow-wrap: break-word;    /* ✅ Break long words at container edge */
+  
   max-width: 100%;
   line-height: 1.6;
-  text-align: justify;               /* ✅ Optional: makes it neater */
+  text-align: left;             /* 🔄 ← REMOVE justify — it causes weird breaks */
 }
+
 
 
 textarea {

@@ -1,6 +1,5 @@
 let lastAIReply = "";
 let lastSecret = "";
-const reply = await fetchAIResponse(secret);
 
 async function fetchAIResponse(secret) {
   const response = await fetch("https://letters-to-nowhere-production.up.railway.app/reply", {

@@ -1,7 +1,7 @@
 let lastAIReply = "";
 
 async function fetchAIResponse(secret) {
-  const response = await fetch("https://your-whispr-backend.up.railway.app/reply", {
+  const response = await fetch("https://letters-to-nowhere-production.up.railway.app/reply", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -129,7 +129,7 @@ document.getElementById("makePosterBtn").addEventListener("click", () => {
     if (!secret) return alert("First enter a secret to make a poster!");
 
     const encoded = encodeURIComponent(secret);
-    window.open(`genifyme-production.up.railway.app=${encoded}`, "_blank");
+   window.open(`https://genifyme-production.up.railway.app?secret=${encoded}`, "_blank");
   });
 
 

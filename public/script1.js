@@ -1,4 +1,7 @@
 let lastAIReply = "";
+let lastSecret = "";
+lastSecret = secret;
+const reply = await fetchAIResponse(secret);
 
 async function fetchAIResponse(secret) {
   const response = await fetch("https://letters-to-nowhere-production.up.railway.app/reply", {
@@ -125,7 +128,7 @@ setTimeout(() => fireSound.pause(), 5000);
 
 
 document.getElementById("makePosterBtn").addEventListener("click", () => {
-    const secret = document.getElementById("secretInput").value.trim();
+   const secret = lastSecret;
     if (!secret) return alert("First enter a secret to make a poster!");
 
     const encoded = encodeURIComponent(secret);

@@ -71,13 +71,11 @@ button:hover {
   text-shadow: 0 0 3px rgba(255, 100, 100, 0.6);
   transition: all 0.4s ease-in;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;        /* 🔁 More aggressive wrapping */
   white-space: normal;
   max-width: 100%;
   line-height: 1.6;
 }
-
-
 textarea {
   padding: 1rem;
   font-size: 1rem;
@@ -179,14 +177,16 @@ textarea {
   }
 }
 
-img.generated-poster {
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
+.generated-poster {
+  max-width: 80%;
+  max-height: 450px;
+  margin: 20px auto 0;
+  display: block;
   border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+  object-fit: cover;
 }
+
 
 
 

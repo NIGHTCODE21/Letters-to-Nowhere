@@ -127,13 +127,41 @@ setTimeout(() => fireSound.pause(), 5000);
 });
 
 
-document.getElementById("makePosterBtn").addEventListener("click", () => {
-   const secret = lastSecret;
-    if (!secret) return alert("First enter a secret to make a poster!");
+document.getElementById("makePosterBtn").addEventListener("click", async () => {
+  const secret = lastSecret;
+  if (!secret) return alert("No secret found!");
 
-    const encoded = encodeURIComponent(secret);
-   window.open(`https://genifyme-production.up.railway.app?secret=${encoded}`, "_blank");
-  });
+  try {
+    const res = await fetch("https://genifyme-production.up.railway.app/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ prompt: secret })
+    });
+
+    const data = await res.json();
+    const imageUrl = data.imageUrl;
+
+    if (imageUrl) {
+      // Create an image element
+      const img = document.createElement("img");
+      img.src = imageUrl;
+      img.alt = "Generated Poster";
+      img.style.maxWidth = "100%";
+      img.style.marginTop = "20px";
+
+      document.querySelector(".container").appendChild(img);
+      document.getElementById("makePosterBtn").style.display = "none"; // hide after showing
+    } else {
+      alert("❌ Failed to generate poster.");
+    }
+  } catch (err) {
+    console.error("Poster error:", err);
+    alert("❌ Could not reach poster server.");
+  }
+});
+
 
 
 

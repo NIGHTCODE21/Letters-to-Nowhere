@@ -92,7 +92,7 @@ document.getElementById("submitBtn").addEventListener("click", async() => {
           setTimeout(() => ash.remove(), 4000);
         }, 50);
 
-        setTimeout(() => clearInterval(ashInterval), 5000);
+        setTimeout(() => clearInterval(ashInterval), 20000);
 
         // 💥 Big ash burst
         for (let i = 0; i < 100; i++) {

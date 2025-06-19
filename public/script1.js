@@ -148,8 +148,8 @@ document.getElementById("makePosterBtn").addEventListener("click", async () => {
       const img = document.createElement("img");
       img.src = imageUrl;
       img.alt = "Generated Poster";
-      img.style.maxWidth = "100%";
-      img.style.marginTop = "20px";
+      img.classList.add("generated-poster");
+
 
       document.querySelector(".container").appendChild(img);
       document.getElementById("makePosterBtn").style.display = "none"; // hide after showing

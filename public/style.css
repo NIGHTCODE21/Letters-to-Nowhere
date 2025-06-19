@@ -70,13 +70,14 @@ button:hover {
   color: #ffbfbf;
   text-shadow: 0 0 3px rgba(255, 100, 100, 0.6);
   transition: all 0.4s ease-in;
-  white-space: pre-wrap;           /* ✅ Respect line breaks & wrap */
-  overflow-wrap: break-word;       /* ✅ Break long words if needed */
-  word-break: normal;              /* ✅ Prevent ugly mid-word splits */
+  white-space: pre-wrap;             /* ✅ Keeps paragraphs + wraps lines */
+  overflow-wrap: break-word;         /* ✅ Breaks if word is too long */
+  word-break: normal;                /* ✅ Never break words mid-letter */
   max-width: 100%;
   line-height: 1.6;
-  text-align: justify;             /* ✅ Optional: looks cleaner */
+  text-align: justify;               /* ✅ Optional: makes it neater */
 }
+
 
 textarea {
   padding: 1rem;

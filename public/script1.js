@@ -124,7 +124,7 @@ setTimeout(() => fireSound.pause(), 5000);
         }, 5000);
 
       }, 1000); // delay after typing
-    }, 5000); // delay after reply
+    }, 10000); // delay after reply
   });
 });
 
